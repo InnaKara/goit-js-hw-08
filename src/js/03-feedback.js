@@ -18,12 +18,10 @@ function handleInput() {
   };
 
   localStorage.setItem(KEYS_FORM, JSON.stringify(dataLocalStor));
-  const parseObj = JSON.parse(localStorage.getItem(KEYS_FORM));
 }
 function handleSubmit(event) {
   event.preventDefault();
+  console.log(JSON.parse(localStorage.getItem(KEYS_FORM)));
+  form.reset();
   localStorage.removeItem(KEYS_FORM);
-
-  form.email.value = '';
-  form.message.value = '';
 }

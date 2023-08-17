@@ -2,15 +2,14 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
-import '../css/01-gallery.css';
+
 import { createMarkup } from '../templates/templatePic';
 // Change code below this line
 
-console.log(SimpleLightbox);
 const container = document.querySelector('.gallery');
 // createMarkup(galleryItems);
 container.insertAdjacentHTML('beforeend', createMarkup(galleryItems));
-container.addEventListener('click', itemsClickHandler);
+
 var lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
